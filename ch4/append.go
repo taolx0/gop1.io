@@ -21,7 +21,7 @@ func appendInt(x []int, y int) []int {
 		if zcap < 2*len(x) {
 			zcap = 2 * len(x)
 		}
-		z = make([]int, zlen, zcap) //
+		z = make([]int, zlen, zcap)
 		copy(z, x)
 	}
 	z[len(x)] = y
