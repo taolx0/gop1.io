@@ -8,7 +8,7 @@ func main() {
 	fmt.Println(data)
 }
 
-func nonempty(strings []string) []string { //normal
+/*func nonempty(strings []string) []string { //function one
 	i := 0
 	for _, i2 := range strings {
 		if i2 != "" {
@@ -17,9 +17,19 @@ func nonempty(strings []string) []string { //normal
 		}
 	}
 	return strings[:i]
+}*/
+
+func nonempty(strings []string) []string { //function two
+	out := strings[:0]
+	for _, i2 := range strings {
+		if i2 != "" {
+			out = append(out, i2)
+		}
+	}
+	return out
 }
 
-/*func nonempty(strings []string) []string {	//test->error
+/*func nonempty(strings []string) []string {	//error example
 	for i, i2 := range strings {
 		if strings[i] != "" {
 			strings[i] = i2
