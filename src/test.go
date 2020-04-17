@@ -5,6 +5,5 @@ import (
 )
 
 func main() {
-	p, q := 0, 1
-	fmt.Println(p & q)
+	fmt.Println(3 / 3)
 }
