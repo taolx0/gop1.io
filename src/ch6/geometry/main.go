@@ -22,6 +22,26 @@ func main() {
 		{1, 1},
 	}
 	fmt.Println(perim.Distance())
+	/*one*/
+	/*	r := &Point{1, 2}
+		r.ScaleBy(2)
+		fmt.Println(*r)*/
+
+	/*two*/
+	/*	r := Point{1, 2}
+		pptr := &r
+		pptr.ScaleBy(2)
+		fmt.Println(r)*/
+
+	/*three*/
+	r := Point{1, 2}
+	(&r).ScaleBy(2)
+	fmt.Println(r)
+}
+
+func (p *Point) ScaleBy(factor float64) {
+	p.X *= factor
+	p.Y *= factor
 }
 
 func Distance(p, q Point) float64 {
