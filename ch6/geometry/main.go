@@ -1,7 +1,6 @@
 package geometry
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -9,7 +8,7 @@ type Point struct{ X, Y float64 }
 
 type Path []Point
 
-func main() {
+/*func main() {
 	p := Point{1, 2}
 	q := Point{4, 6}
 	fmt.Println(Distance(p, q))
@@ -23,21 +22,21 @@ func main() {
 	}
 	fmt.Println(perim.Distance())
 	/*one*/
-	/*	r := &Point{1, 2}
+/*		r := &Point{1, 2}
 		r.ScaleBy(2)
 		fmt.Println(*r)*/
 
 	/*two*/
-	/*	r := Point{1, 2}
+/*		r := Point{1, 2}
 		pptr := &r
 		pptr.ScaleBy(2)
 		fmt.Println(r)*/
 
 	/*three*/
-	r := Point{1, 2}
+/*	r := Point{1, 2}
 	(&r).ScaleBy(2)
-	fmt.Println(r)
-}
+	fmt.Println(r)*/
+/*}*/
 
 func (p *Point) ScaleBy(factor float64) {
 	p.X *= factor
