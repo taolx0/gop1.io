@@ -24,6 +24,7 @@ func main() {
 }
 
 func handleConn(c net.Conn) {
+	defer c.Close()
 	_, err := io.WriteString(c, time.Now().Format("16:01:03\n"))
 	if err != nil {
 		log.Fatal(err)
