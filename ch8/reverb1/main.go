@@ -28,6 +28,9 @@ func main() {
 func echo(c net.Conn, shout string, delay time.Duration) {
 	fmt.Fprintln(c, strings.ToUpper(shout))
 	time.Sleep(delay)
+	fmt.Fprintln(c, shout)
+	time.Sleep(delay)
+	fmt.Fprintln(c, strings.ToLower(shout))
 }
 
 func handleConn(conn net.Conn) {
