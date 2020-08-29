@@ -1,14 +1,9 @@
 package main
 
-import "fmt"
-
-func main() {
-	f := squares()
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
-}
+import (
+	"fmt"
+	"reflect"
+)
 
 func squares() func() int {
 	var x int
@@ -16,4 +11,20 @@ func squares() func() int {
 		x++
 		return x * x
 	}
+}
+
+func main() {
+	f := squares()
+	fmt.Println("typeof(f):", reflect.TypeOf(f))
+	fmt.Println("typeof(f()):", reflect.TypeOf(f()))
+	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
+	fmt.Println(f())
+
+	//wrong,can not work
+	//fmt.Println(squares()())
+	//fmt.Println(squares()())
+	//fmt.Println(squares()())
+	//fmt.Println(squares()())
 }
