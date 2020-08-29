@@ -1,4 +1,4 @@
-package basename1
+package basename2
 
 import (
 	"fmt"
@@ -6,6 +6,6 @@ import (
 )
 
 func TestBasename(t *testing.T) {
-	s := basename("/go/src/main.go")
+	s := basename("/go/src/data.go")
 	fmt.Println(s)
 }

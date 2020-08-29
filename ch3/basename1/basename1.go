@@ -1,6 +1,6 @@
 package basename1
 
-func basename1(s string) string {
+func basename(s string) string {
 	//删除‘/’之前的内容
 	for i := len(s) - 1; i >= 0; i-- {
 		if s[i] == '/' {
