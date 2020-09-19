@@ -9,4 +9,5 @@ import (
 func main() {
 	os.Args = []string{"dog", "cat", "lion"}
 	fmt.Println(strings.Join(os.Args[:], " "))
+	fmt.Println(os.Args)
 }
