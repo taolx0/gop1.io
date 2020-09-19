@@ -12,9 +12,10 @@ func main() {
 	for input.Scan() {
 		counts[input.Text()]++
 	}
+	//ignore input.Err()
 	for line, n := range counts {
 		if n > 1 {
-			fmt.Printf("%d\t%s\n", n, line)
+			fmt.Printf("count:%d\tinput.text():%s\n", n, line)
 		}
 	}
 }
