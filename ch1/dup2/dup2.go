@@ -10,9 +10,9 @@ import (
 
 func main() {
 	counts := make(map[string]int)
-	os.Args = []string{"dog.txt", "cat.txt"}
+	//os.Args = []string{"dog.txt", "cat.txt"}
 	//os.Args = []string{}
-	files := os.Args[:]
+	files := os.Args[1:]
 	if len(files) == 0 {
 		countLines(os.Stdin, counts)
 	} else {

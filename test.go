@@ -29,4 +29,7 @@ func main() {
 	//s[0]++
 	//s[1]++
 	//fmt.Println(s)
+	//bytes := []byte{'b', 'b', 'q'}
+	//fmt.Printf("%s",bytes)
+	//fmt.Printf("%4d",123)
 }
