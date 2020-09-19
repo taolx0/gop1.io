@@ -32,4 +32,6 @@ func main() {
 	//bytes := []byte{'b', 'b', 'q'}
 	//fmt.Printf("%s",bytes)
 	//fmt.Printf("%4d",123)
+
+	//fmt.Println(runtime.NumCPU())
 }
