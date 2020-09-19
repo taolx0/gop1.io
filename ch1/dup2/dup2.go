@@ -1,5 +1,7 @@
 package main
 
+//dup2 print count and text
+//can read from files
 import (
 	"bufio"
 	"fmt"
@@ -8,26 +10,25 @@ import (
 
 func main() {
 	counts := make(map[string]int)
-	files := os.Args[1:]
+	os.Args = []string{"dog.txt", "cat.txt"}
+	//os.Args = []string{}
+	files := os.Args[:]
 	if len(files) == 0 {
 		countLines(os.Stdin, counts)
 	} else {
 		for _, arg := range files {
-			{
-				f, err := os.Open(arg)
-				if err != nil {
-					fmt.Fprint(os.Stderr, "dup2:%v\n", err)
-					continue
-				}
-				countLines(f, counts)
-				f.Close()
+			f, err := os.Open(arg)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "dup2:%v\n", err)
+				continue
 			}
+			countLines(f, counts)
+			f.Close()
 		}
 	}
 	for line, n := range counts {
 		if n > 1 {
-			fmt.Printf("%d\t%s\n", n, line)
-
+			fmt.Printf("count:%d\tinput.text():%s\n", n, line)
 		}
 	}
 }

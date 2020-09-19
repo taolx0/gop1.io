@@ -23,4 +23,10 @@ func main() {
 	//f, ok := w.(*os.File)
 	//fmt.Println("f:", reflect.TypeOf(f), "ok:", ok)
 
+	//s := make(map[int]int)
+	//fmt.Println(s)
+	//s[0]++
+	//s[0]++
+	//s[1]++
+	//fmt.Println(s)
 }
