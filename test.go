@@ -11,7 +11,7 @@ func main() {
 	//	fmt.Println(i)
 	//}
 
-	//var w io.Writer
+	//var w io.Write
 	//fmt.Println(reflect.TypeOf(w))
 	//w = os.Stdout
 	//fmt.Println(reflect.TypeOf(w))
@@ -19,7 +19,7 @@ func main() {
 	//fmt.Println(reflect.TypeOf(w))
 	//var rwc io.ReadWriteCloser
 
-	//var w io.Writer = os.Stdout
+	//var w io.Write = os.Stdout
 	//f, ok := w.(*os.File)
 	//fmt.Println("f:", reflect.TypeOf(f), "ok:", ok)
 
