@@ -6,9 +6,11 @@ import (
 	"time"
 )
 
+var duration = flag.Duration("period", 1*time.Second, "sleep period")
+
 func main() {
-	duration := flag.Duration("period", 1*time.Second, "sleep period")
 	flag.Parse()
 	fmt.Println(duration)
 	time.Sleep(*duration)
+	fmt.Println()
 }

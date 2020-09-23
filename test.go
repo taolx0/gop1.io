@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"sort"
+)
+
 func main() {
 	//s := "hello"
 	////s1 := make([]byte, 5, 10)
@@ -33,5 +38,14 @@ func main() {
 	//fmt.Printf("%s",bytes)
 	//fmt.Printf("%4d",123)
 
-	//fmt.Println(runtime.NumCPU())
+	////fmt.Println(runtime.NumCPU())
+	//var a io.Writer
+	//a = os.Stdout
+	//_, _ = a.Write([]byte("hello"))
+	//var s interface{} = time.Now()
+	//var s interface{} = []byte{'b','t','t'}
+	//fmt.Println(s==s)
+	strings := []string{"dog", "cat", "tiger"}
+	sort.Strings(strings)
+	fmt.Println(strings)
 }

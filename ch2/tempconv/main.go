@@ -1,4 +1,4 @@
-package main
+package tempconv
 
 import "fmt"
 
@@ -14,10 +14,8 @@ const (
 	BoilingF  Fahrenheit = 212.0
 )
 
-func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
-func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
+func (c Celsius) String() string { return fmt.Sprintf("%g°C", c) }
 
-func main() {
-	fmt.Printf("%g°C\n", BoilingC-FreezingC)
-	fmt.Printf("%g°F\n", BoilingF-CToF(FreezingC))
-}
+func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
+
+func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
