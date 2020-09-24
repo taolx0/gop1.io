@@ -40,7 +40,6 @@ func (x byYear) Len() int           { return len(x) }
 func (x byYear) Less(i, j int) bool { return x[i].Year < x[j].Year }
 func (x byYear) Swap(i, j int)      { x[i], x[j] = x[j], x[i] }
 
-/*???*/
 func main() {
 	fmt.Println("byArtist:")
 	sort.Sort(byArtist(tracks))
@@ -100,6 +99,7 @@ func printTracks(tracks []*Track) {
 	fmt.Fprintf(tw, format, "Title", "Artist", "Album", "Year", "Length")
 	fmt.Fprintf(tw, format, "-----", "------", "-----", "----", "------")
 	for _, t := range tracks {
+		//log.Printf("%T\n", t)
 		fmt.Fprintf(tw, format, t.Title, t.Artist, t.Album, t.Year, t.Length)
 	}
 	tw.Flush()
