@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	db := database{"shoes": 50, "socks": 5}
+	db := database{"shoes": 50.333, "socks": 5.999}
 	log.Fatal(http.ListenAndServe("localhost:8000", db))
 }
 
@@ -18,6 +18,8 @@ func (d dollars) String() string { return fmt.Sprintf("$%.2f", d) }
 type database map[string]dollars
 
 func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+	//log.Println(req.URL.Path)
+	//log.Println(req.URL)
 	switch req.URL.Path {
 	case "/list":
 		for item, price := range db {
