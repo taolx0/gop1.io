@@ -1,5 +1,11 @@
 package main
 
+import (
+	"fmt"
+	"io"
+	"os"
+)
+
 func main() {
 	//s := "hello"
 	////s1 := make([]byte, 5, 10)
@@ -48,4 +54,11 @@ func main() {
 	//fmt.Println(&i)
 	//fmt.Println(errors.New("EOF"))
 	//fmt.Println(errors.New("EOF") == errors.New("EOF"))
+
+	var w io.Writer
+	w = os.Stdout
+	f := w.(*os.File)
+	//f2 := w.(*bytes.Buffer)
+	fmt.Printf("%T\n", f)
+	//fmt.Printf("%T\n", f2)
 }
