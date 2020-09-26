@@ -7,12 +7,10 @@ import (
 )
 
 func main() {
-	mux := http.NewServeMux()
 	db := database{"shoes": 50.333, "socks": 5.999}
-	mux.Handle("/list", http.HandlerFunc(db.list))
-	//mux.HandleFunc("/list", db.list)
-	mux.Handle("/price", http.HandlerFunc(db.price))
-	log.Fatal(http.ListenAndServe("localhost:8000", mux))
+	http.HandleFunc("/list", db.list)
+	http.HandleFunc("/price", db.price)
+	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
 
 func (db database) list(w http.ResponseWriter, r *http.Request) {

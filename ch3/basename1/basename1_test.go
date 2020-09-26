@@ -6,6 +6,6 @@ import (
 )
 
 func TestBasename(t *testing.T) {
-	s := basename("/go/src/main.go")
+	s := basename("/go/src/eval.go")
 	fmt.Println(s)
 }

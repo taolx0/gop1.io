@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"sort"
-)
-
 func main() {
 	//s := "hello"
 	////s1 := make([]byte, 5, 10)
@@ -45,7 +40,12 @@ func main() {
 	//var s interface{} = time.Now()
 	//var s interface{} = []byte{'b','t','t'}
 	//fmt.Println(s==s)
-	strings := []string{"dog", "cat", "tiger"}
-	sort.Strings(strings)
-	fmt.Println(strings)
+	//strings := []string{"dog", "cat", "tiger"}
+	//sort.Strings(strings)
+	//fmt.Println(strings)
+
+	//i := 5
+	//fmt.Println(&i)
+	//fmt.Println(errors.New("EOF"))
+	//fmt.Println(errors.New("EOF") == errors.New("EOF"))
 }
