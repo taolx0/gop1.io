@@ -55,8 +55,28 @@ func main() {
 	//f2 := w.(*bytes.Buffer)
 	//fmt.Printf("%T\n", f)
 	//fmt.Printf("%#v\n", f2)
-	//
+
 	//_, err := os.Open("/no/such/file")
 	//fmt.Println(err)
 	//fmt.Printf("%#v\n", err)
+	//fmt.Println(os.IsNotExist(err))
+
+	//fmt.Println(44)
+	//fmt.Println()
+	//fmt.Println(44)
+}
+
+//func test2(w io.Writer, s string) (n int, err error) {
+//	type test1 interface {
+//		test(string) bool
+//	}
+//	if sw, ok := w.(stringWriter); ok {
+//		log.Println(sw)
+//		sw.WriteString(s)
+//	}
+//	return w.Write([]byte(s))
+//}
+
+type stringWriter interface {
+	WriteString(string) (n int, err error)
 }
