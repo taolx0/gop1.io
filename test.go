@@ -64,6 +64,13 @@ func main() {
 	//fmt.Println(44)
 	//fmt.Println()
 	//fmt.Println(44)
+
+	//fmt.Println(1 & 0)
+	//fmt.Println(1 & 1)
+	//fmt.Println(0 & 0)
+	//fmt.Println(1 | 0)
+	//fmt.Println(1 | 1)
+	//fmt.Println(0 | 0)
 }
 
 //func test2(w io.Writer, s string) (n int, err error) {
