@@ -74,7 +74,8 @@ func main() {
 	//fmt.Println(1 | 1)
 	//fmt.Println(0 | 0)
 
-	fmt.Println([]byte("x"))
+	//fmt.Println([]byte("x"))
+	fmt.Println(1 << 23)
 }
 
 //func test2(w io.Writer, s string) (n int, err error) {
