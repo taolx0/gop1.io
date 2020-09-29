@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	//s := "hello"
 	////s1 := make([]byte, 5, 10)
@@ -71,6 +73,8 @@ func main() {
 	//fmt.Println(1 | 0)
 	//fmt.Println(1 | 1)
 	//fmt.Println(0 | 0)
+
+	fmt.Println([]byte("x"))
 }
 
 //func test2(w io.Writer, s string) (n int, err error) {
