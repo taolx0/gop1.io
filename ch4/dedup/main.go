@@ -11,6 +11,7 @@ func main() {
 	input := bufio.NewScanner(os.Stdin)
 	for input.Scan() {
 		line := input.Text()
+		//log.Println(seen[line])
 		if !seen[line] {
 			seen[line] = true
 			fmt.Println(line)
