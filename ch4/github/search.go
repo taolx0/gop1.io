@@ -8,10 +8,10 @@ import (
 	"strings"
 )
 
-//???
 func SearchIssues(terms []string) (*IssuesSearchResult, error) {
 	q := url.QueryEscape(strings.Join(terms, " "))
 	resp, err := http.Get(IssuesURL + "?q=" + q)
+	//log.Println(resp.Body)
 	if err != nil {
 		return nil, err
 	}
