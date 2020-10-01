@@ -18,21 +18,19 @@ var movies = []Movie{
 		Actor: []string{"Humphrey Bogart", "Ingrid Bergman"}},
 	{Title: "Cool Hand Luke", Year: 1967, Color: true,
 		Actor: []string{"Paul Newman"}},
-	{Title: "Bullitt", Year: 1968, Color: true,
+	{Title: "Bull", Year: 1968, Color: true,
 		Actor: []string{"Steve McQueen", "Jacqueline Bisset"}},
 }
 
 func main() {
-	{
-		data, err := json.Marshal(movies)
-		if err != nil {
-			log.Fatalf("JSON marshaling failed: %s", err)
-		}
-		fmt.Printf("%s\n", data)
+	data, err := json.Marshal(movies)
+	if err != nil {
+		log.Fatalf("JSON marshaling failed: %s", err)
 	}
+	fmt.Printf("%s\n", data)
 
 	{
-		data, err := json.MarshalIndent(movies, "", "  ")
+		data, err := json.MarshalIndent(movies, "", "	")
 		if err != nil {
 			log.Fatalf("JSON marshaling failed: %s\n", err)
 		}
